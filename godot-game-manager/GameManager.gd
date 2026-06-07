@@ -26,5 +26,7 @@ func add_score(points: int) -> void:
 	print("Score: ", score)
 
 func reset() -> void:
+	_mutex.lock()
 	score = 0
 	player_health = 100
+	_mutex.unlock()
